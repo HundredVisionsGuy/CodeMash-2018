@@ -1,0 +1,76 @@
+Refactoring a Legacy App with ReactJS
+
+https://github.com/aporlando/jquery-to-react
+
+When should you refactor
+Why use new tech to do so
+
+Incrementally refactoring
+
+by @fed_goose
+
+Why refactor?
+  Requirements are bound to change
+  Don't let the customers find the faults for you
+  Code is a mystery to the team
+
+  Time to pay down the technical debt
+
+DON'T REWRITE - Refactor instead
+  Learn from your mistakes
+  There is value to explore the complexity - Spolsky quote
+  Not everything needs to be rewritten
+  Not feasible
+  Not timely
+  Large userbase with need for support while rewriting
+  What about a new feature? Put in both legacy and new? Tell user to wait? Risk of new solution
+
+  Her team uses Confluence and Jira did a redesign - pain of change and re-learning familiar tasks all over again
+    Think about going from PC to Mac and mouse scroll button or keyboard shortcuts
+    Customers already know how to use our system
+
+NOTE: there may be reasons to rewrite - too many feature requests, current features have issues
+
+Use an incremental refactor
+How?
+  Set Goals - know what you want? (see slides)
+  Create a plan (try following and maybe repeat steps 1-3 a few times to research potential solutions)
+    1. choose a technology (make sure they fit in with goals)
+    2. try it, find a pattern -> what will refactoring do and mean for you
+      - understand trade-offs - do a deep dive
+      - document as you go
+    3. review & plan
+    4. identify an opportunity
+    5. start small & grow out over time (start with a button for example)
+    [step above can validate your plan]
+
+Why React?
+  Didn't have rigid framework like Angular v2
+
+  OnShift's past
+    used TurboGears a Python library
+    used jQuery to manipulate the dom
+    no unit tests
+
+  React allows you to refactor incrementally
+  encapsulated
+  You can use React in any project, just insert a React component into the DOM
+  it's testable
+  makes units reusable
+
+Why Redux?
+  to manage state in React
+  3 Principles:
+    1. single source of Truth
+    2. State is read-only
+      dispatching actions that describe what happened
+    3. Changes to state happen in pure functions (called reducers)
+
+State defines UI
+  UI triggers/dispatches actions
+    actions send reducer
+      reducers update state
+        See presentation
+
+Why Redux? trace UI, maintain undo history, encapsulated business logic,
+  How long can you go without state dependencies 
