@@ -1,0 +1,53 @@
+Android is a framework, it's not an architecture
+https://github.com/jameskbride/EventBusMVPDemo
+
+Common Android problems
+  framework gets in the way
+  making changes is hard
+  testing is painful
+    (especially on the emulator - I can imagine on the stack - or with dependencies)
+  nested callbacks listeners,
+Root Causes
+  All of the code lives in Activities and Fragments
+  There are no layers, so everything knows about everything (this makes testing more painful)
+  Activities and Fragments call up inheritance chain, making testing difficult when all code lives There
+    classes that extend whatever - calls to super
+      what's going on up the chain?
+      stub exception -> when you try to make a call with a jar they provided (has only basic implementation)
+  Logic is invoked on click listeners, etc.
+
+Remediations
+  Pull as much code as possible out of Activities and Fragments - good bang for your buck
+  Create layers of abstraction
+  Invert Control to Collaborators
+  Favor Composition over Inheritance (from is-a to has-a)
+    A good practice in general
+
+// Two Tools: Separation of Concerns Decoupling
+  // Separation
+    Model-view-presenter
+    SOLID (single responsibility principle - separation of concerns)
+    View <-> Presenter <-> Model
+
+  // In code:
+    @Inject the presenter
+    in onCreate
+      set view to presenter
+
+    logic is removed from the view - only does what it's supposed to do
+    call presenter
+
+    * In Presenter
+
+  // Activites or fragments or custom layouts are the View -> all of them
+
+// Decoupling with EventBus
+  Changes in highly-coupled code cause a ripple effect
+
+// EventBus
+  OOD isn't really about "things"
+  It's about messages and message passing
+  Publisher/Subscriber Pattern
+    Publisher posts() and EventBus sends events to providers
+    You need to tell the bus to respond and react to onPause
+  RxJava does not implement pub / sub (instead it uses Subject / Observe ) -> Observer will not help you

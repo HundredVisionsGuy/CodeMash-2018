@@ -1,0 +1,73 @@
+Super Mario UX
+
+// Game Play shows you how to Play
+  Direction he's pointing
+  Bad guy with angry eyebrows come towards you
+  mushroom is same shape
+  reinforces jumping because you can't jump over it
+  blinking
+  Most of the first level
+
+No one reads a modal
+If you don't want anyone to find the body, put it in a modal
+
+W1-2 Original Super Mario
+  You drop down and break a block
+  right after are some blocks with coins below
+  rewards
+  Intro an element in a safe environment that can't hurt you
+  Then brings back the element in a slightly more difficult
+  And ratches up more risk & reward
+
+Applied to App design || education
+  Intro element in safe environment
+  Provide opty to use element
+  Repeat the element in increasing difficulty as you go
+
+  Intro new element w/no clutter
+  More robust and increasing complexity as you go
+
+Super Mario 3D world
+  Places laser hockey puck underneath a question block - you know you want to get to the question block, so you head towards it
+
+  Make it accessible for new users but also for power players
+
+As example, look at Slack
+  Welcome screen clean with short description with a button below AND a link to skip the tutorial
+  Green button opens up what you can do (write a message) - makes you use the app
+
+Nintendo design
+  Game play first
+  Character design later
+  Picman -> two actions: throw and retrieve
+
+  Toss mario hat to enemy, and you can now control the enemy
+    enemy can only do two things
+
+  Take just a few mechanics and apply them to many situations
+
+  Think about how so many of the apps include posting text and images, but their constraints shaped the way we use them:
+    Facebook started with must have had EDU email - encouraged people to connect with closer people
+    Twitter - 140 character limitation at the beginning - encouraged people to follow famous people
+
+  What is the primary focus of your app
+
+  Legend of Zelda - Breath of the Wild
+    It's about exploration
+    Every mechanic is shaped to encourage exploring
+    They actually designed it in a 2D world (I think that's what he said)
+    Skyrim got boring once he leveled up to best material -
+    Zelda had it where the sword would break early on
+    Korax seeds to find help you expand inventory, but were scattered around
+    Early games had locked areas to Create
+    Breath of the Wild -> all was open with various items to be discovered, empty map that you had to mark up
+
+    All mechanics encourage exploration
+      Gameplay is what is the primary thing to do?
+      Mechanics are the interactions that encourage core game play
+
+  Check out Pro-Create for embodying this concept
+    Tools are mostly invisible
+    UI hides non-using tools
+
+    bradcolbow.com/mario.pdf

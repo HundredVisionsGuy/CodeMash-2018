@@ -1,0 +1,54 @@
+/* Building and Coding an LED Wall */
+
+Alternative Controllers in Game Design
+
+Made a game where 2 computers interacted with the Wall
+
+Can use Raspberry pi or connect remotely
+
+The Build (very DIY) - check Adafruit or Sparkfun
+  3x3 panels (64x32 RGB LED Matrix Panels) - Adafruit
+    panels connect with ribbon cables
+    each panel is made of 32x32 LEDs
+  Raspberry Pi 2 Model B - GitHub for hgeller
+    There are cons with Pi 3 (too fast)
+  3 ATX Power Supplies
+  Netgear Router (Ethernet is best for Artnet)
+    Not recommended to run on wifi
+  Adapter Board 5v->3.3V (~$80/board)
+    Buffers the signal
+    You have to build it (design is pre-made, you have to order and solder)
+      Do SMD soldering (use liquid solder and heat it)
+        because chip sits on top
+    molex connectors
+  Aluminum Extrusion for frame / stand
+  Consider external ethernet Adapter
+
+  with 1 panel, you can use passive connections (no soldering required)
+    uses RGB LEDs
+
+  Wiring is tedious but straightforward
+
+github.com/hzeller/rpi-rgb-led-Matrix
+https://github.com/hzeller/rpi-rgb-led-matrix
+
+https://github.com/hzeller/rpi-matrix-pixelpusher
+
+The bridge is a Java program that will show the communication between board and pixelpusher
+
+Running locally:
+  RGB Hat - can only run 1 panel
+  Native language is C++ Fill(), Clear(), SetPixel(), DrawLine(), DrawText()
+  Bindings exist for Python, C#, and Node.js
+  You can even code in processing
+
+Can make it iOT with NodeRED on top of Node.js
+  Run on Raspberry Pi and accessed remotely from a Windows machine
+    There is a caveat - must add include for RBG LED matrix library
+
+  NodeRed - look into for students (being a visual/flow-based)
+
+Animations for events: Jinx! Software
+  Tedious Process : Patching - can only take 128 or 256 pixels at a time (must do 1 row at a time )
+
+disable x windows

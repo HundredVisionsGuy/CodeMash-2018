@@ -1,0 +1,58 @@
+/* JSON Parsing in Swift just got a whole lot easier */
+
+@rajagp
+
+github.com/rajagp
+Swift must be version 4
+
+Consider a NoSQL JSON Data Store (like couchbase lite)
+
+Swift Codable
+  A type that convert itself into and out of an external representation
+  encode and decode
+  Go back and forth from and to JSON
+  Keys must be system types (not abstract)
+struct UserProfile:Decodable {
+
+}
+Decoder protocol
+  container<Key> throws... (used for JSON) - for key value pairs
+  unkeyedContainer() throws... (used for arrays)
+  singleValueContainer() throws... (holds the value data)
+
+Under the Hood -> great example of abstraction
+
+Note on CodingKey
+  enum ProfileKeys:String, CodingKey {
+    case id
+    case name
+    ...
+    case imageUrl - "imageurl"
+    ...
+  }
+  all keys must be included
+  you must set any key that has a different case (e.g. imageUrl = "imageurl")
+
+Use Cases
+  Case 2 with date
+    decoder.dateDecodingStrategy to iso?
+
+  Case 2 from "name"
+
+  Case 4 Nested JSON
+    "interests" : {
+      "sports" : ["football", "baseball"],
+      "music" : ["violin", "classical"]
+    }
+    Break the data into 2 containers
+
+  Case 5 2 variants (either base 64 image or image url )
+
+  Case 6
+    Have a user profile type and later want to use a student profile
+    Transform the JSON to a sub-class
+
+  Case 7
+    education is mutable could change
+    for education, you could give the value as arrays
+    see for loop (for key in container.allKeys { })
